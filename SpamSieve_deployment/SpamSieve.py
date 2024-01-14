@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+import os
 import numpy as np
 import pandas as pd
 import re
@@ -19,7 +20,8 @@ app = Flask(__name__,template_folder='template')
 # remove the head of eamil
 def remove_header(email):
     """remove the header from an email"""
-    return email[email.index('\n\n'):]
+    # return email[email.index('\n\n'):]
+    return email
 
 
 def remove_html_tags(input):
@@ -84,11 +86,13 @@ def EmailsPreprocessor(sentence):
 
     return sentence
 
+# static/MetaData/test_data.json
+word_index = os.path.join(app.static_folder, 'MetaData', 'word_index.json')
 
 def Tokenizer_email(email):
   max_len = 3000 # max number of words in a question to use
   # Load word_index from the saved JSON file
-  with open('word_index.json', 'r') as json_file:
+  with open(word_index, 'r') as json_file:
       loaded_word_index = json.load(json_file)
 
   tokenizer = Tokenizer()
@@ -99,13 +103,16 @@ def Tokenizer_email(email):
   return pad_sequences(eamil_seq,maxlen=max_len)
 
 
+# static/MetaData/test_data.json
+metadata = os.path.join(app.static_folder, 'MetaData', 'Email_classifier.h5')
+
 def Emails_Classifier(email):
   email_pro = EmailsPreprocessor(email)
   print(email_pro)
   email_tok = Tokenizer_email(email_pro)
   print(email_tok)
   # load model's metadata
-  model = load_model('Email_classifier.h5')
+  model = load_model(metadata)
   # Model predict  a number from 0.0 to 1.0
   y_pred = model.predict(email_tok)
 
@@ -126,7 +133,8 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     # Extract input email from the request
-    email = request.form['message']
+    email = str(request.form['message'])
+    print(email)
     # Make predictions using the loaded model
     pred = Emails_Classifier(email)
     
