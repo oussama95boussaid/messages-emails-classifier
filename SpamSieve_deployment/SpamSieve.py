@@ -29,7 +29,7 @@ def predict():
     # Make predictions using the loaded model
     # prediction = model.predict([[feature1, feature2]])
 
-    return render_template('index.html')
+    return render_template('index.html',prediction=email)
 
 
 if __name__ == '__main__':

@@ -8164,8 +8164,8 @@ h1, h2, h3, h4, h5,
 .bg-primary {
   background: #1089ff !important; }
 
-.ftco-section {
-  padding: 2em 0; }
+/* .ftco-section {
+  padding: 2px 0; } */
 
 .ftco-no-pt {
   padding-top: 0; }
@@ -8306,4 +8306,9 @@ textarea.form-control {
   font-size: 18px;
   font-weight: bold; }
 
+  .autor{
+    position: absolute;
+    bottom: 0px;
+    right: 12px;
+  }
 
