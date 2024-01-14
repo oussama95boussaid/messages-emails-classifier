@@ -22,7 +22,7 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     # Extract input email from the request
-    email = str(request.form['message'])
+    email = request.form['message']
     print(email)
 
     # Preprocess the input features
