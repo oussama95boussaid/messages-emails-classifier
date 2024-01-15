@@ -134,7 +134,7 @@ def home():
 def predict():
     # Extract input email from the request
     email = str(request.form['message'])
-    print(email)
+    
     # Make predictions using the loaded model
     pred = Emails_Classifier(email)
     
