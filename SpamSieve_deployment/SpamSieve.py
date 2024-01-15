@@ -122,7 +122,7 @@ def Emails_Classifier(email):
     return 'Spam'
 
   else :
-    return 'Ham'
+    return 'Not Spam'
 
 
 
