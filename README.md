@@ -1,1 +1,1 @@
-# messages-emails-classifier
+# **SpamSieve : Email Classification Tool**
