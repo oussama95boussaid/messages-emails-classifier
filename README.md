@@ -6,7 +6,7 @@ SpamSieve is an Email Classification Tool designed to categorize emails efficien
 
 # **Techniques Used**
 
-  NLP Techniques:
+  - NLP Techniques:
 
     Remove Header
     Remove HTML Tags
@@ -17,4 +17,8 @@ SpamSieve is an Email Classification Tool designed to categorize emails efficien
     Remove Underscores
     Remove Stopwords
     Remove Special Characters
-  LSTM for Classification
+  - LSTM for Classification
+
+# **Deployment**
+
+The model is deployed as an API using Flask, offering seamless integration and interaction with other systems and applications. The Flask framework provides a robust environment for hosting the model, enabling efficient and reliable access to the classification functionality.
