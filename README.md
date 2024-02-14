@@ -23,4 +23,4 @@ SpamSieve is an Email Classification Tool designed to categorize emails efficien
 
 The model is deployed as an API using Flask, offering seamless integration and interaction with other systems and applications. The Flask framework provides a robust environment for hosting the model, enabling efficient and reliable access to the classification functionality.
 
-<img src ="images/ui" >
+<img src ="Images/ui.png" >
