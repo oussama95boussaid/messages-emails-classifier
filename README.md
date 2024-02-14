@@ -56,3 +56,11 @@ Run the Flask application using the command python SpamSieve.py.
     python SpamSieve.py
 
 Once the application is running, you can interact with the classification API using appropriate requests.
+
+# **Contribution**
+
+Contributions to SpamSieve are welcomed! Whether it's bug fixes, feature enhancements, or documentation improvements, your contributions are highly appreciated. Please feel free to submit pull requests or open issues for any suggestions or problems encountered.
+
+# **Acknowledgments**
+
+Special thanks to the open-source community for providing invaluable resources and libraries that made this project possible.
