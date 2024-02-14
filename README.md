@@ -8,15 +8,15 @@ SpamSieve is an Email Classification Tool designed to categorize emails efficien
 
   - NLP Techniques:
 
-    Remove Header
-    Remove HTML Tags
-    Convert to Lowercase
-    Remove Hyperlinks
-    Remove Whitespace
-    Remove Digits
-    Remove Underscores
-    Remove Stopwords
-    Remove Special Characters
+    - Remove Header
+    - Remove HTML Tags
+    - Convert to Lowercase
+    - Remove Hyperlinks
+    - Remove Whitespace
+    - Remove Digits
+    - Remove Underscores
+    - Remove Stopwords
+    - Remove Special Characters
   - LSTM for Classification
 
 # **Deployment**
